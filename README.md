@@ -2,7 +2,7 @@
 <h1 align="center">PlexCore</h1>
 <p>
   <img src="https://img.shields.io/github/license/PlexHost/plexcore?color=blue&style=flat-square"  alt="license"/>
-  <img src="https://img.shields.io/github/v/release/TriumphTeam/triumph-gui?color=green&style=flat-square" alt="release">
+  <img src="https://img.shields.io/github/v/release/PlexHost/plexcore?color=green&style=flat-square" alt="release">
 </p>
 
 > This lib is made to simplify the creation of plugins.
