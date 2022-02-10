@@ -12,7 +12,8 @@ public abstract class Hook implements IHook {
     public Hook(String paramString, dk.plexhost.core.enums.Hook paramHook){
         this.name = paramString;
         this.hook = paramHook;
-        this.isEnabled = Bukkit.getPluginManager().getPlugin(getName()) != null && Bukkit.getPluginManager().getPlugin(getName()).isEnabled();
+        if(paramHook.isBuiltIn()) this.isEnabled = true;
+        else this.isEnabled = Bukkit.getPluginManager().getPlugin(getName()) != null && Bukkit.getPluginManager().getPlugin(getName()).isEnabled();
     }
 
     @Override
