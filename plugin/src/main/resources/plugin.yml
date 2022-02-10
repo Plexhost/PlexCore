@@ -1,0 +1,11 @@
+name: PlexCore
+main: ${project.groupId}.PlexPlugin
+version: ${project.pluginVersion}
+description: Core plugin for many of PlexHost's plugins
+authors:
+  - Plexhost.dk
+  - SIMON#1386
+website: plexhost.dk
+softdepend:
+  - Vault
+  - PlaceholderAPI
