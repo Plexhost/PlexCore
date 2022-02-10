@@ -10,6 +10,13 @@
     <version>1.0</version>
 
 
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.pluginVersion>2.1</project.pluginVersion>
+    </properties>
+
     <repositories>
         <repository>
             <id>spigot-repo</id>
@@ -30,14 +37,6 @@
             <version>21.0.1</version>
         </dependency>
     </dependencies>
-
-
-    <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.pluginVersion>2.0</project.pluginVersion>
-    </properties>
 
     <build>
         <plugins>
