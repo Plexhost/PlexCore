@@ -3,7 +3,8 @@ package dk.plexhost.core.enums;
 public enum Hook {
     VAULT(false),
     PLACEHOLDERAPI(false),
-    ACTIONBAR(true)
+    ACTIONBAR(true),
+    ESSENTIALS(false)
     ;
 
     private final boolean isBuiltIn;

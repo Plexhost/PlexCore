@@ -1,10 +1,7 @@
 package dk.plexhost.core;
 
 import dk.plexhost.core.enums.Hook;
-import dk.plexhost.core.hooks.Actionbar;
-import dk.plexhost.core.hooks.IHook;
-import dk.plexhost.core.hooks.PlaceholderAPIHook;
-import dk.plexhost.core.hooks.VaultHook;
+import dk.plexhost.core.hooks.*;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
@@ -37,7 +34,8 @@ public class PlexPlugin extends JavaPlugin {
         IHook[] hooks = new IHook[]{
                 new VaultHook(),
                 new PlaceholderAPIHook(),
-                new Actionbar()
+                new Actionbar(),
+                new EssentialsHook()
         };
         for(IHook hook : hooks)
             HOOKS.put(hook.getEnum(), hook.init(this));
