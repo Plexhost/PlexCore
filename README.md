@@ -18,8 +18,8 @@
 </repositories>
 <dependencies>
     <dependency>
-        <groupId>com.github.Plexhost</groupId>
-        <artifactId>Plexcore</artifactId>
+        <groupId>com.github.Plexhost.PlexCore</groupId>
+        <artifactId>packaging</artifactId>
         <version>{VERSION}</version>
         <scope>provided</scope>
     </dependency>
