@@ -1,5 +1,6 @@
 package dk.plexhost.core.utils;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class NumberUtils {
@@ -14,4 +15,12 @@ public class NumberUtils {
         for(int i : ints) sum += i;
         return sum;
     }
+
+    public static int sum(Iterable<Integer> integers){
+        int sum = 0;
+        for(int i : integers) sum += i;
+        return sum;
+    }
+
+
 }
