@@ -1,5 +1,6 @@
 package dk.plexhost.core.utils;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class StringUtils {
@@ -27,5 +28,12 @@ public class StringUtils {
         for (int i = 0; i < len; i++)
             if (!Character.isLetter(s.charAt(i))) return false;
         return true;
+    }
+
+    public static String getCapitalized(String value){
+        List<String> list = new ArrayList<>();
+        for(String s : value.split(" "))
+            list.add(s.substring(0, 1).toUpperCase() + s.substring(1).toLowerCase());
+        return String.join(" ", list);
     }
 }

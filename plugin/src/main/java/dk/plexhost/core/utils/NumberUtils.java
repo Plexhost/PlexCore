@@ -1,6 +1,5 @@
 package dk.plexhost.core.utils;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Random;
 
@@ -23,5 +22,34 @@ public class NumberUtils {
         return sum;
     }
 
+    public static boolean isFloat(String value){
+        if(value == null || value.equals("")) return false;
+        try{
+            Float.parseFloat(value);
+            return true;
+        } catch (NumberFormatException e){
+            return false;
+        }
+    }
+
+    public static boolean isDouble(String value){
+        if(value == null || value.equals("")) return false;
+        try{
+            Double.parseDouble(value);
+            return true;
+        } catch (NumberFormatException e){
+            return false;
+        }
+    }
+
+    public static boolean isInteger(String value){
+        if(value == null || value.equals("")) return false;
+        try{
+            Integer.parseInt(value);
+            return true;
+        } catch (NumberFormatException e){
+            return false;
+        }
+    }
 
 }
