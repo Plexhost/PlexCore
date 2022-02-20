@@ -21,7 +21,8 @@ public class EssentialsHook extends Hook{
 
     @Override
     public boolean init(JavaPlugin plugin) {
-        if(!plugin.isEnabled()) return false;
+        if(!plugin.isEnabled())
+            return false;
         PLUGIN = plugin;
         INSTANCE = (Essentials) Bukkit.getPluginManager().getPlugin("Essentials");
         return true;

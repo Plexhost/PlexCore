@@ -9,3 +9,4 @@ website: plexhost.dk
 softdepend:
   - Vault
   - PlaceholderAPI
+  - Essentials

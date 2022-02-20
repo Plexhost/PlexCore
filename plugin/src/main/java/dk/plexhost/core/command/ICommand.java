@@ -43,11 +43,9 @@ public abstract class ICommand implements CommandExecutor {
     protected ISubCommand findSubCommand(String command){
         for(ISubCommand subCommand : getSubCommands()){
             if(subCommand.getName().equalsIgnoreCase(command)) return subCommand;
-            for(String alias : subCommand.getAliases()){
-                if(alias.equalsIgnoreCase(command)){
+            for(String alias : subCommand.getAliases())
+                if(alias.equalsIgnoreCase(command))
                     return subCommand;
-                }
-            }
         }
         return getDefaultCommand();
     }
@@ -67,7 +65,8 @@ public abstract class ICommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
-        execute(sender, findSubCommand(s), args);
+        if(args.length > 0) execute(sender, findSubCommand(args[0]), args);
+        else execute(sender, getDefaultCommand(), args);
         return true;
     }
 }
