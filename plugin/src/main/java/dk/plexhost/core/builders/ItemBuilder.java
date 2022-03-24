@@ -273,6 +273,16 @@ public class ItemBuilder {
         return this;
     }
 
+    public ItemBuilder removeNBT(boolean remove){
+        ItemMeta meta = this.item.getItemMeta();
+        if(remove)
+            meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_DESTROYS, ItemFlag.HIDE_ENCHANTS, ItemFlag.HIDE_POTION_EFFECTS, ItemFlag.HIDE_PLACED_ON, ItemFlag.HIDE_UNBREAKABLE);
+        else
+            meta.removeItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_DESTROYS, ItemFlag.HIDE_ENCHANTS, ItemFlag.HIDE_POTION_EFFECTS, ItemFlag.HIDE_PLACED_ON, ItemFlag.HIDE_UNBREAKABLE);
+        this.item.setItemMeta(meta);
+        return this;
+    }
+
     private String format(String paramString) {
         if(PlexPlugin.isHookInitialised(Hook.PLACEHOLDERAPI))
             paramString = PlaceholderAPI.setPlaceholders(player, paramString);
