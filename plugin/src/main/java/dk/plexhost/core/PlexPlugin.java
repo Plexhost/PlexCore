@@ -2,6 +2,7 @@ package dk.plexhost.core;
 
 import dk.plexhost.core.enums.Hook;
 import dk.plexhost.core.hooks.*;
+import dk.plexhost.core.interfaces.IHook;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;

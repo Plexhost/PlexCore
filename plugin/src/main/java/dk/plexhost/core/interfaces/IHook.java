@@ -1,4 +1,4 @@
-package dk.plexhost.core.hooks;
+package dk.plexhost.core.interfaces;
 
 import dk.plexhost.core.enums.Hook;
 import org.bukkit.plugin.java.JavaPlugin;

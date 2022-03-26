@@ -1,5 +1,6 @@
 package dk.plexhost.core.hooks;
 
+import dk.plexhost.core.interfaces.IHook;
 import org.bukkit.Bukkit;
 import org.jetbrains.annotations.NotNull;
 

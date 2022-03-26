@@ -6,6 +6,7 @@ import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.permission.Permission;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -18,7 +19,10 @@ public class VaultHook extends Hook {
     private static Chat CHAT = null;
     private static Permission PERMISSION = null;
 
-    private static String ECONOMY_EXCEPTION = "Trying to use Vault Economy Provider, but non was provided during initialising.";
+    private static final String ECONOMY_EXCEPTION = "Trying to use Vault Economy Provider, but non was provided during initialising.";
+    private static final String PERMISSION_EXCEPTION = "Trying to use Vault Permission Provider, but non was provided during initialising.";
+    private static final String CHAT_EXCEPTION = "Trying to use Vault Chat Provider, but non was provided during initialising.";
+
 
     public VaultHook() {
         super("Vault", dk.plexhost.core.enums.Hook.VAULT);
@@ -123,6 +127,28 @@ public class VaultHook extends Hook {
 
     public static void addBalance(OfflinePlayer paramOfflinePlayer, double paramDouble){
         depositBalance(paramOfflinePlayer, paramDouble);
+    }
+
+    /**
+     *
+     * @param player the {@link Player} to get the prefix of
+     * @return the prefix of the {@link Player}
+     */
+    public static String getPrefix(Player player){
+        if(CHAT == null)
+            throw new HookNotEnabledException(CHAT_EXCEPTION);
+        return CHAT.getPlayerPrefix(player) != null ? CHAT.getPlayerPrefix(player) : "";
+    }
+
+    /**
+     *
+     * @param player the {@link Player} to get the suffix of
+     * @return the suffix of the {@link Player}
+     */
+    public static String getSuffix(Player player){
+        if(CHAT == null)
+            throw new HookNotEnabledException(CHAT_EXCEPTION);
+        return CHAT.getPlayerSuffix(player) != null ? CHAT.getPlayerSuffix(player) : "";
     }
 
 }
