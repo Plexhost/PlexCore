@@ -151,4 +151,15 @@ public class VaultHook extends Hook {
         return CHAT.getPlayerSuffix(player) != null ? CHAT.getPlayerSuffix(player) : "";
     }
 
+    public static String getPrimaryGroup(Player player){
+        if(PERMISSION == null)
+            throw new HookNotEnabledException(PERMISSION_EXCEPTION);
+        return PERMISSION.getPrimaryGroup(player);
+    }
+
+    public static String[] getPlayerGroups(Player player){
+        if(PERMISSION == null)
+            throw new HookNotEnabledException(PERMISSION_EXCEPTION);
+        return PERMISSION.getPlayerGroups(player);
+    }
 }
