@@ -78,7 +78,7 @@
     <modules>
         <module>gui</module>
         <module>plugin</module>
-        <module>inventivetalent</module>
+        <module>particles</module>
         <module>packaging</module>
     </modules>
 

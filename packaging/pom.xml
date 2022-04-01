@@ -24,7 +24,7 @@
         </dependency>
         <dependency>
             <groupId>dk.plexhost.core</groupId>
-            <artifactId>inventivetalent</artifactId>
+            <artifactId>particles</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
