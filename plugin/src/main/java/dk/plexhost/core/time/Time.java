@@ -24,7 +24,7 @@ public class Time {
     }
 
     public static String getFormattedTime(int n, boolean withSeconds){
-        if(n < 0){
+        if(n <= 0){
             return "0 sekunder";
         } else{
             int days, hours, minutes, seconds;
