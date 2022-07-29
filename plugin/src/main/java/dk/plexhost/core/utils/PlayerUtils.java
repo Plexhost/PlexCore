@@ -49,7 +49,7 @@ public class PlayerUtils {
             if(!offlinePlayer.isOnline())
                 if(paramBoolean) Bukkit.getScheduler().runTask(PlexPlugin.getInstance(), () -> paramConsumer.accept(offlinePlayer));
                 else Bukkit.getScheduler().runTask(PlexPlugin.getInstance(), () -> paramConsumer.accept(null));
-            paramConsumer.accept(offlinePlayer);
+            Bukkit.getScheduler().runTask(PlexPlugin.getInstance(), () -> paramConsumer.accept(offlinePlayer));
         });
     }
 }
