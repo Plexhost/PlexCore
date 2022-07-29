@@ -25,7 +25,6 @@ package dev.triumphteam.gui.guis;
 
 import dev.triumphteam.gui.components.GuiAction;
 import dev.triumphteam.gui.components.util.ItemNbt;
-import org.apache.commons.lang.Validate;
 import org.bukkit.Material;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
@@ -57,7 +56,6 @@ public class GuiItem {
      * @param action    The {@link GuiAction} to run when clicking on the Item
      */
     public GuiItem(@NotNull final ItemStack itemStack, @Nullable final GuiAction<@NotNull InventoryClickEvent> action) {
-        Validate.notNull(itemStack, "The ItemStack for the GUI Item cannot be null!");
 
         this.action = action;
 
@@ -99,7 +97,6 @@ public class GuiItem {
      * @param itemStack The new {@link ItemStack}
      */
     public void setItemStack(@NotNull final ItemStack itemStack) {
-        Validate.notNull(itemStack, "The ItemStack for the GUI Item cannot be null!");
         this.itemStack = ItemNbt.setString(itemStack, "mf-gui", uuid.toString());
     }
 
