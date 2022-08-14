@@ -262,7 +262,7 @@ public class ItemBuilder {
     public ItemBuilder glow(boolean glow) {
         ItemMeta itemMeta = this.item.getItemMeta();
         if (glow) {
-            itemMeta.addEnchant(Enchantment.LURE, 1, false);
+            itemMeta.addEnchant(Enchantment.LURE, 1, true);
             itemMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         } else {
             for (Enchantment enchantment : itemMeta.getEnchants().keySet()) {
