@@ -474,11 +474,13 @@ public abstract class BaseGui implements InventoryHolder {
      * @param player The {@link HumanEntity} to open the GUI to.
      */
     public void open(@NotNull final HumanEntity player) {
-        if (player.isSleeping()) return;
+        Bukkit.getScheduler().runTask(plugin, () -> {
+            if (player.isSleeping()) return;
 
-        inventory.clear();
-        populateGui();
-        player.openInventory(inventory);
+            inventory.clear();
+            populateGui();
+            player.openInventory(inventory);
+        });
     }
 
     /**
